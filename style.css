@@ -1,0 +1,102 @@
+body {
+    height: 105vh; 
+    background-color: var(--base-color);
+    font-family: 'Lora', serif;
+}
+:root {
+    --base-color: #76187d88; 
+    --large-font: #072b43e1;
+    --neon-effect: #3A8A60;
+    --opate:  #cbcbcbab;
+}
+.grid-container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: .25fr 1fr 2.5fr .25fr;
+    grid-template-areas: 
+        "header header header header"
+        "smallBox1 smallBox2 smallBox3 sidebar"
+        "main main main sidebar"
+        "footer footer footer footer"
+    ;
+    gap: .5rem;
+}
+header {
+    grid-area: header;
+    border: 1px solid black;
+    padding-bottom: .5rem;
+    background-color: aliceblue; 
+    box-shadow: 0px 0px 1px 3px var(--neon-effect);
+    background-image: url("images/header.jpg");
+    background-size: 100% 150px;
+    background-repeat: no-repeat;
+}
+h1 {
+    text-align: center;
+    font-family: 'Rubik Microbe', cursive;
+    font-size: 3rem;
+    color: var(--large-font);
+    background-color: var(--opate);
+}
+a {
+   padding: .25em;
+    margin-left: 1.15rem;
+    background-color: var(--opate);
+}
+#smallBox1 {
+    grid-area: smallBox1;
+    border: 1px solid black;
+    box-shadow: 0px 0px 1px 3px var(--neon-effect);
+    background-image: url("images/6.jpg");
+    background-size: 100%;
+}
+#smallBox2 {
+    grid-area: smallBox2;
+    border: 1px solid black;
+    box-shadow: 0px 0px 1px 3px var(--neon-effect);
+    background-image: url("images/2.jpg");
+    background-size: 100%;
+}
+#smallBox3 {
+    grid-area: smallBox3;
+    border: 1px solid black;
+    box-shadow: 0px 0px 1px 3px var(--neon-effect);
+    background-image: url("images/7.jpg");
+    background-size: 100%;
+}
+main {
+    grid-area: main;
+    border: 1px solid black;
+    box-shadow: 0px 0px 1px 3px var(--neon-effect);
+    background-image: url("images/lobby.jpg");
+    background-size: 100%;
+
+}
+#sidebar {
+    grid-area: sidebar;
+    line-height: .6rem;
+    border: 1px solid black;
+    box-shadow: 0px 0px 15px 5px var(--neon-effect);
+    font-size: 10px;
+    background-image: url("images/8.jpg");
+    background-size: 180px 100%;
+    background-repeat: no-repeat;
+
+}
+ul {
+    list-style: none;
+    margin-left: -2rem;
+    
+}
+li {
+    background-color: var(--opate);
+    padding-bottom: .05rem;
+    margin-bottom: .5rem;
+    margin-right: .5rem;
+}
+footer {
+    grid-area: footer;
+    border: 1px solid black;
+    box-shadow: 0px 0px 15px 1px var(--neon-effect);
+}
